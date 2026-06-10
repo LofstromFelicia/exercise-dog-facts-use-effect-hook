@@ -1,15 +1,32 @@
-// Import required  hooks
+import { useState, useEffect, use } from "react";
 import { DogFact } from "./components/DogFact";
 
 export const App = () => {
-  // Hint: Initialize state for storing the dog fact
-  // Hint: Define the API endpoint
-  // Hint: Create a function to fetch the dog fact
-  // Hint: Use the useEffect hook to fetch the dog fact when the component mounts
+  // to save dogFact 
+  const [dogFact, setDogFact] = useState(null)
+
+  // API end point
+  const url = "https://dogapi.dog/api/v2/facts"
+
+  // Function to fetch data
+  const fetchDogFact = async () => {
+    try {
+      const response = await fetch(url)
+      const json = await response.json()
+
+      setDogFact(json.data[0])
+    } catch (error) {
+      console.error("Could Not Find Dog Fact:", error)
+    }
+  }
+
+  useEffect(() => {
+    fetchDogFact();
+  }, []);
 
   return (
     <div className="App">
-      <DogFact />
+      <DogFact fact={dogFact} />
     </div>
   );
 };

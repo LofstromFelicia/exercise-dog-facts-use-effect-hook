@@ -1,1 +1,54 @@
-/* Start Adding your CSS here */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f3ee;
+  color: #4a3f35;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.dog-fact-card::before {
+  content: "🐾";
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.dog-fact-card p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 500;
+}
+
+.loading {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #a3917f;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
