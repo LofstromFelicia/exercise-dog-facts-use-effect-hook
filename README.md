@@ -1,30 +1,38 @@
-<h1 align="center">
-  <a href="">
-    <img src="/src/assets/dog-facts.svg" alt="Boiler Plate">
-  </a>
-</h1>
+# React Dog Facts 🐾
 
-# React Dog Facts useEffect Hook Exercise
+A lightweight, responsive React application built with Vite that fetches dynamic data from an external Dog Facts API using the `useEffect` hook and passes it down via props.
 
-For this weeks practice you will practice using the useEffect hook to create a simple app that will use an external free API to retrieve Dog Facts.
+## View it live
+🔗 [Check out the live project here!](INSERT_YOUR_CLOUDFLARE_LINK_HERE)
 
-"The better I get to know men, the more I find myself loving dogs." - Charles de Gaulle
+---
 
+## Project Purpose & Features
 
-## Instructions:
-Fetch the data from the Dog Facts free API JSON File and pass down the data from the parent component to its child component.  We've created the necessary components for you, now it's up to you to pass the prop properly to the `DogFact.jsx` component. Keep in mind that this exercise's repository `styles.css` is empty, and feel free to add CSS if you'd like—it's encouraged! The primary focus here remains to master the useEffect hook and efficiently passing data received from the API into different components via props in React.
+This project is a practical exercise focused on mastering core React Hooks and data flow architecture. 
 
-## API
-https://dogapi.dog/api/v2/facts
+* **State Management & Side Effects:** Utilizes `useState` to manage the API data and `useEffect` to trigger an asynchronous `fetch` request immediately when the component mounts.
+* **Component Communication (Props):** Demonstrates clean data lifting and prop drilling by passing the retrieved API object from the parent `App.jsx` component down to the child `DogFact.jsx` component.
+* **Conditional Rendering:** Implements a smooth loading state (`if (!fact)`) to handle asynchronous delays gracefully before the API returns data.
+* **Custom Styling:** Features a custom, warm "puppy-themed" CSS layout with smooth typography, rounded cards, micro-interactions, and a loading pulse animation.
+
+---
+
+## Tech Stack & Tools
+* **React 18 & JSX** – For component architecture and hooks (`useState`, `useEffect`)
+* **Vite** – As the fast, modern frontend build tool
+* **CSS3** – Tailored flexbox centering, custom animations, and layout design
+* **Dog Facts API** – An external JSON REST API for retrieving random facts
+
+---
 
 ## Getting Started with the Project
 
-### Dependency Installation & Startup Development Server:
+### Dependency Installation & Startup Development Server
 
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
+Once cloned, navigate to the project's root directory. This project uses npm (Node Package Manager) to manage its dependencies.
 
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
+Run the command below in your terminal to install all dependencies, open the project in VS Code, and spin up the local development server:
 
 ```bash
 npm i && code . && npm run dev
-```
