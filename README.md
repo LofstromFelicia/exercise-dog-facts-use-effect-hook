@@ -3,7 +3,7 @@
 A lightweight, responsive React application built with Vite that fetches dynamic data from an external Dog Facts API using the `useEffect` hook and passes it down via props.
 
 ## View it live
-🔗 [Check out the live project here!](INSERT_YOUR_CLOUDFLARE_LINK_HERE)
+🔗 [Check out the live project here!](https://exercise-dog-facts-use-effect-hook.pages.dev)
 
 ---
 
